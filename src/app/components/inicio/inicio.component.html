@@ -26,9 +26,9 @@
                         <div class="contenedor">
                             <p>Altura</p>
                             <div class="estiloNumero">
-                                170 <span class="cm">cm</span>
+                                {{ altura }} <span class="cm">cm</span>
                             </div>
-                            <input type="range" class="form-range">
+                            <input type="range" (input)="cambiarAltura($event)" [value]="altura" min="120" max="220" class="form-range">
                         </div>
                     </div>
                 </div>
@@ -39,11 +39,11 @@
                         <div class="contenedor">
                             <p>Peso</p>
                             <div class="estiloNumero">
-                                60
+                                {{ peso }}
                             </div>
                             <div>
-                                <i class="fas fa-minus sumaResta"></i>
-                                <i class="fas fa-plus sumaResta"></i>
+                                <i class="fas fa-minus sumaResta" (click)="peso = peso - 1"></i>
+                                <i class="fas fa-plus sumaResta" (click)="peso = peso + 1"></i>
                             </div>
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                         <div class="contenedor">
                             <p>Edad</p>
                             <div class="estiloNumero">
-                                25
+                                {{ edad }}
                             </div>
                             <div>
                                 <i class="fas fa-minus sumaResta"></i>

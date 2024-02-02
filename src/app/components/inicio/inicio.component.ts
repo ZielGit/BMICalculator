@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./inicio.component.css']
 })
 export class InicioComponent {
+  edad = 25;
+  peso = 60;
+  altura = 170;
 
+  constructor() { }
+
+  cambiarAltura(event: any) {
+    this.altura = event.target.value;
+  }
 }
